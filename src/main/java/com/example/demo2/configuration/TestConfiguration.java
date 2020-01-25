@@ -1,6 +1,9 @@
 package com.example.demo2.configuration;
 
 import com.example.demo2.Dzieci.Present;
+import com.example.demo2.Ekspres.Computer;
+import com.example.demo2.Ekspres.Ekspres;
+import com.example.demo2.Ekspres.Programista;
 import com.example.demo2.model.Kierowca;
 import com.example.demo2.model.Kluczyki;
 import com.example.demo2.model.PrawoJazdy;
@@ -13,6 +16,24 @@ import java.util.List;
 
 @Configuration
 public class TestConfiguration {
+    @Bean
+    public Programista programista1(Ekspres ekspres, Computer computer){
+        return new Programista(ekspres, computer);
+    }
+    @Bean
+    public Programista programista2(Ekspres ekspres, Computer computer){
+        return new Programista(ekspres, computer);
+    }
+    @Bean
+    public Programista programista3(Ekspres ekspres, Computer computer){
+        return new Programista(ekspres, computer);
+    }
+    @Bean
+    public Programista programista4(Ekspres ekspres, Computer computer){
+        return new Programista(ekspres, computer);
+    }
+
+}
 
 /*
     @Bean
@@ -38,6 +59,7 @@ public class TestConfiguration {
 public Kierowca kierowca (Kluczyki kluczyki, PrawoJazdy prawoJazdy) {
     return new Kierowca(kluczyki,prawoJazdy);
 }*/
+/*
     @Bean
     public Present dlaMalgosi() {
         return new Present ("lalka");
@@ -51,4 +73,4 @@ public Kierowca kierowca (Kluczyki kluczyki, PrawoJazdy prawoJazdy) {
     public Present dlaZbysia() {
         return new Present ("klocki");
     }
-}
+}*/
