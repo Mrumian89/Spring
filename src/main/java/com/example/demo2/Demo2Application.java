@@ -1,5 +1,6 @@
 package com.example.demo2;
 
+import com.example.demo2.Figura.Figura;
 import com.example.demo2.Kalkulator.Kalkulator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,6 +11,7 @@ public class Demo2Application {
 
 	public static void main(String[] args) {
 		Kalkulator.getInstance().dodaj(2,2);
+		Figura.kwadrat(4).pole();
 		SpringApplication.run(Demo2Application.class, args);
 	}
 
